@@ -16,6 +16,24 @@ const counterWords = [
     'upgrade',
     'code'
   ];
-  function repeatCounter(param) {
-    // insert code
+
+
+  function repeatCounter(arrayCounterDuplicates) {
+
+    const result = {};
+
+    for (let i = 0; i < arrayCounterDuplicates.length; i++) {
+      
+        if (arrayCounterDuplicates [i] in result){
+          result[arrayCounterDuplicates[i]]++
+
+        } else {
+          result[arrayCounterDuplicates[i]] = 1;
+        }  
+      }
+      return result;
   }
+
+ console.log(repeatCounter(counterWords));
+
+
